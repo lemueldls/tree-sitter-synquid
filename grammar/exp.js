@@ -76,6 +76,8 @@ module.exports = {
 
   _exp_list: $ => brackets($, sep1(',', field('element', $._exp)), optional(',')),
 
+  _exp_hole: $ => '??',
+
   /**
     * An expression like `[1,2..20]`.
     */
@@ -388,6 +390,7 @@ module.exports = {
     alias($._exp_parens, $.parens),
     alias($._exp_tuple, $.tuple),
     alias($._exp_list, $.list),
+    alias($._exp_hole, $.hole),
     // Not using a name like "empty list" here because it's only really special in types.
     alias($._plist, $.list),
     alias($._exp_section_left, $.left_section),

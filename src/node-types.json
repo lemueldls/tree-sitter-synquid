@@ -262,6 +262,10 @@
         "named": true
       },
       {
+        "type": "hole",
+        "named": true
+      },
+      {
         "type": "implicit_variable",
         "named": true
       },
@@ -6249,6 +6253,10 @@
   {
     "type": "hiding",
     "named": false
+  },
+  {
+    "type": "hole",
+    "named": true
   },
   {
     "type": "if",

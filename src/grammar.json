@@ -3102,6 +3102,10 @@
         }
       ]
     },
+    "_exp_hole": {
+      "type": "STRING",
+      "value": "??"
+    },
     "_exp_arithmetic_sequence": {
       "type": "SEQ",
       "members": [
@@ -4982,6 +4986,15 @@
           },
           "named": true,
           "value": "list"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_exp_hole"
+          },
+          "named": true,
+          "value": "hole"
         },
         {
           "type": "ALIAS",
