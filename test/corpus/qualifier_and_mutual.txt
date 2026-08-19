@@ -1,0 +1,32 @@
+==================
+qualifier_and_mutual
+==================
+
+qualifier {x <= y, x != y, x ==> y, x + 2 <= y}
+mutual {insert, insL, insR}
+
+---
+
+(source_file 
+  (declaration 
+    (qualifier_declaration 
+      (container_body 
+        (variable )
+        (operator )
+        (variable )
+        (variable )
+        (operator )
+        (variable )
+        (variable )
+        (operator )
+        (variable )
+        (variable )
+        (operator )
+        (integer )
+        (operator )
+        (variable ))))
+  (declaration 
+    (mutual_declaration 
+      name: (variable )
+      name: (variable )
+      name: (variable ))))

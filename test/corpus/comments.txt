@@ -1,0 +1,25 @@
+==================
+comments
+==================
+
+-- line comment
+{- block
+   comment -}
+type Nat = {Int | _v >= 0} -- trailing comment
+
+---
+
+(source_file 
+  (comment_line )
+  (comment_block )
+  (declaration 
+    (type_alias 
+      name: (constructor )
+      (body 
+        (expression 
+          (brace 
+            (container_body 
+              (special_var )
+              (operator )
+              (integer )))))))
+  (comment_line ))

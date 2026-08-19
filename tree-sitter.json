@@ -1,0 +1,21 @@
+{
+  "grammars": [
+    {
+      "name": "synquid",
+      "scope": "source.synquid",
+      "file-types": [
+        "sq"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for Synquid (.sq) \u2014 flat, highlighting-oriented",
+    "authors": [
+      {
+        "name": "synquid-rs"
+      }
+    ]
+  }
+}

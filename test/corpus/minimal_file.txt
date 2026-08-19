@@ -1,0 +1,132 @@
+==================
+minimal_file
+==================
+
+type Nat = {Int | _v >= 0}
+
+data List a where
+  Nil :: List a
+  Cons :: x: a -> xs: List a -> List a
+
+termination measure len :: List a -> {Int | _v >= 0} where
+  Nil -> 0
+  Cons x xs -> 1 + len xs
+
+replicate :: n: Nat -> x: a -> {List a | len _v == n}
+replicate = ??
+
+---
+
+(source_file 
+  (declaration 
+    (type_alias 
+      name: (constructor )
+      (body 
+        (expression 
+          (brace 
+            (container_body 
+              (special_var )
+              (operator )
+              (integer )))))))
+  (declaration 
+    (data_declaration 
+      name: (constructor )
+      (body 
+        (expression 
+          (variable )))
+      (constructor_case 
+        (constructor )
+        (body 
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression 
+            (constructor ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))))))
+  (declaration 
+    (measure_declaration 
+      name: (variable )
+      (body 
+        (expression 
+          (constructor ))
+        (expression 
+          (variable ))
+        (expression )
+        (expression 
+          (brace 
+            (container_body 
+              (special_var )
+              (operator )
+              (integer )))))
+      (measure_case 
+        (constructor )
+        (body 
+          (expression 
+            (integer ))
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (integer ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (constructor ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (brace 
+              (container_body 
+                (constructor )
+                (variable )
+                (variable )
+                (special_var )
+                (operator )
+                (variable ))))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (hole )))))))

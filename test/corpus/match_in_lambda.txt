@@ -1,0 +1,55 @@
+==================
+match_in_lambda
+==================
+
+zip = \xs . \ys .
+    match xs with
+      Nil -> Nil
+      Cons x3 x4 -> Cons (Pair x3 x7) (zip x4 x8)
+
+---
+
+(source_file 
+  (declaration 
+    (function_definition 
+      name: (variable )
+      (body 
+        (expression 
+          (lambda 
+            (variable )
+            (body 
+              (expression 
+                (lambda 
+                  (variable )
+                  (body 
+                    (expression 
+                      (match_expression 
+                        (body 
+                          (expression 
+                            (variable )))
+                        (match_case 
+                          (constructor )
+                          (body 
+                            (expression 
+                              (constructor ))
+                            (expression 
+                              (constructor ))
+                            (expression 
+                              (variable ))
+                            (expression 
+                              (variable ))
+                            (expression )
+                            (expression 
+                              (constructor ))
+                            (expression 
+                              (paren 
+                                (container_body 
+                                  (constructor )
+                                  (variable )
+                                  (variable ))))
+                            (expression 
+                              (paren 
+                                (container_body 
+                                  (variable )
+                                  (variable )
+                                  (variable ))))))))))))))))))

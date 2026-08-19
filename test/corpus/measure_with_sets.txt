@@ -1,0 +1,83 @@
+==================
+measure_with_sets
+==================
+
+measure elems :: List a -> Set a where
+  Nil -> []
+  Cons x xs -> [x] + elems xs
+
+member :: x: a -> t: BST a -> {Bool | _v == (x in elems t)}
+member = ??
+
+---
+
+(source_file 
+  (declaration 
+    (measure_declaration 
+      name: (variable )
+      (body 
+        (expression 
+          (constructor ))
+        (expression 
+          (variable ))
+        (expression )
+        (expression )
+        (expression 
+          (variable )))
+      (measure_case 
+        (constructor )
+        (body 
+          (expression 
+            (bracket ))
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (bracket 
+              (container_body 
+                (variable ))))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (brace 
+              (container_body 
+                (special_var )
+                (operator )
+                (expression 
+                  (paren 
+                    (container_body 
+                      (variable )
+                      (variable )
+                      (variable )))))))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (hole )))))))

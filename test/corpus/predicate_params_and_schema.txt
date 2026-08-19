@@ -1,0 +1,134 @@
+==================
+predicate_params_and_schema
+==================
+
+data List a <p :: Int -> a -> Bool> where
+  Nil :: List a <p>
+  Cons :: x: {a | p 0 _v} -> xs: List a <{p (_0 + 1) _1}> -> List a <p>
+
+elemIndex :: <p :: Int -> a -> Bool> . x: a -> xs: {List a <p> | x in elems _v} -> {Int | p _v x}
+elemIndex = ??
+
+---
+
+(source_file 
+  (declaration 
+    (data_declaration 
+      name: (constructor )
+      (body 
+        (expression 
+          (variable ))
+        (expression )
+        (expression 
+          (variable ))
+        (expression )
+        (expression )
+        (expression )
+        (expression 
+          (variable ))
+        (expression )
+        (expression )
+        (expression ))
+      (constructor_case 
+        (constructor )
+        (body 
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (constructor ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (brace 
+              (container_body 
+                (variable )
+                (variable )
+                (integer )
+                (special_var ))))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (brace 
+              (container_body 
+                (variable )
+                (expression 
+                  (paren 
+                    (container_body 
+                      (special_index )
+                      (operator )
+                      (integer ))))
+                (special_index ))))
+          (expression )
+          (expression )
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression )
+          (expression )
+          (expression 
+            (variable ))
+          (expression )
+          (expression )
+          (expression )
+          (expression 
+            (variable ))
+          (expression )
+          (expression )
+          (expression )
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (brace 
+              (container_body 
+                (constructor )
+                (variable )
+                (variable )
+                (variable )
+                (variable )
+                (special_var ))))
+          (expression )
+          (expression 
+            (brace 
+              (container_body 
+                (variable )
+                (special_var )
+                (variable ))))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (hole )))))))

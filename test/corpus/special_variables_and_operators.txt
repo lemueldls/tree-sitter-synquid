@@ -1,0 +1,92 @@
+==================
+special_variables_and_operators
+==================
+
+data Pair a b where
+  Pair :: x: a -> y: b -> Pair a b
+
+leq :: x: a -> y: a -> {Bool | _v == (x <= y) && (x <==> y)}
+caseOf = \_ . \x . x
+
+---
+
+(source_file 
+  (declaration 
+    (data_declaration 
+      name: (constructor )
+      (body 
+        (expression 
+          (variable ))
+        (expression 
+          (variable )))
+      (constructor_case 
+        (constructor )
+        (body 
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (constructor ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (variable ))
+          (expression 
+            (operator ))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (brace 
+              (container_body 
+                (special_var )
+                (operator )
+                (expression 
+                  (paren 
+                    (container_body 
+                      (variable )
+                      (operator )
+                      (variable ))))
+                (operator )
+                (expression 
+                  (paren 
+                    (container_body 
+                      (variable )
+                      (operator )
+                      (variable )))))))
+          (expression 
+            (variable ))
+          (expression )
+          (expression 
+            (lambda 
+              (wildcard )
+              (body 
+                (expression 
+                  (lambda 
+                    (variable )
+                    (body 
+                      (expression 
+                        (variable )))))))))))))
