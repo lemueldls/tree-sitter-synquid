@@ -1,18 +1,4 @@
-/**
- * Flat tree-sitter grammar for Synquid (.sq), used for syntax highlighting in Zed.
- *
- * Design notes:
- * - No indentation handling (deliberately flat; highlights are leaf-centric).
- * - Every rule carries `prec(-1, ...)`: at any shift/reduce point the shift wins,
- *   so greedy bodies swallow atoms (variables, constructors, operators, holes...)
- *   and reduce only where no atom can follow — keywords (`where`, `with`,
- *   `then`, `else`, `in`, `let`...), closing delimiters, or EOF. This yields
- *   error-free parses of all leaf tokens on any well-formed file.
- * - Keywords and structural punctuation are anonymous literals; identifier-like
- *   literals win lexical ties by being referenced before the generic identifier
- *   tokens (tree-sitter prefers the first-created token on equal-length matches).
- */
-module.exports = grammar({
+export default grammar({
   name: 'synquid',
 
   word: ($) => $.variable,
@@ -21,8 +7,6 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) => repeat($.declaration),
-
-
 
     declaration: ($) =>
       prec(
